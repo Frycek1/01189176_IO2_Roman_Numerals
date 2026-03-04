@@ -59,11 +59,8 @@ mod tests {
         (3917, "MMMCMXVII"),
         ];
         for (num, expected) in test_cases {
-        assert_eq!(
-            Ok(String::from(expected)), 
-            convert(num),
-        );
-    }
+            assert_eq!(Ok(String::from(expected)), convert(num),);
+        }
     }
     
     
