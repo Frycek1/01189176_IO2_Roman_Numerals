@@ -1,11 +1,10 @@
 #[derive(Debug, PartialEq)]
-enum RomanNumeralsErr {
+pub enum RomanNumeralsErr {
     TooBig,
     TooSmall,
 }
 
-#[allow(dead_code)]
-fn convert(mut num: i64) -> Result<String, RomanNumeralsErr>{
+pub fn convert(mut num: i64) -> Result<String, RomanNumeralsErr>{
     if num >= 4000 {
         return Err(RomanNumeralsErr::TooBig);
     }
